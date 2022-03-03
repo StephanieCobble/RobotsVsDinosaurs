@@ -2,17 +2,16 @@
 
 from Dinosaur import Dinosaur
 
-
 class Herd:
     def __init__(self):
         self.dinosaurs = []
-        self.health = 0
+        self.health = 100
     
     def create_herd(self):
-        dino1 = Dinosaur('Blue')
+        dino1 = Dinosaur('Blue', 5) 
         self.dinosaurs.append(dino1)
-        dino2 = Dinosaur('Spike')
+        dino2 = Dinosaur('Spike', 5)
         self.dinosaurs.append(dino2)
-        dino3 = Dinosaur('Yoshi')
+        dino3 = Dinosaur('Yoshi', 5)
         self.dinosaurs.append(dino3)
-        self.health = (dino1 + dino2 + dino3)
+        self.health = (dino1 and dino2 and dino3)

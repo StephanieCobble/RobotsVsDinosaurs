@@ -6,18 +6,26 @@ from Robot import Robot
 
 class Battlefield:
     def __init__(self):
-        self.fleet = Fleet().create_fleet        #added ()
-        self.herd = Herd().create_herd          #added ()
+        self.fleet = Fleet().create_fleet()        #added ()
+        self.herd = Herd().create_herd()          #added ()
     
     def run_game(self):
-        self.run_game = self.battle
+        self.run_game = self.display_welcome()
+        self.run_game = self.battle()
+        self.run_game = self.dino_turn()
+        self.run_game = self.robo_turn()
+        self.run_game = self.show_dino_opponent_oppositions()
+        self.run_game = self.show_robo_opponent_oppositions()
+        self.run_game = self.display_winners()
 
     def display_welcome(self):
-        dislpay_welcome = 'Welcome to Robots vs Dinos! Get ready for the ultimate prehistoric - post-apocalyptic show down!'
-        print(dislpay_welcome)
+        self.display_welcome = 'Welcome to Robots vs Dinos! Get ready for the ultimate prehistoric - post-apocalyptic show down!'
+        print(self.display_welcome)
 
     def battle(self):
-        while (Fleet.health > 0 and Herd.health > 0):
+        self.battle = 'Prepare to battle!'
+        print(self.battle)
+        while (Fleet.health >= 1 and Herd.health >=1):
             for i in range(len(Fleet.robots)):
                 Robot.attack
             for i in range(len(Herd.dinosaurs)):
@@ -42,4 +50,6 @@ class Battlefield:
             print('Sorry, Robots, you are the losing team! DINOS WIN!!')
         elif Herd.health == 0 and Fleet.health > 0:
             print('Sorry, Dinos you are the losing team! ROBOTS WIN!!')
+        else:
+            pass
 
