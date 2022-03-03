@@ -19,8 +19,14 @@ from Weapon import Weapon
 class Robot:
     def __init__(self, name):
         self.name = name
-        self.health = int 
-        self.weapon = Weapon
+        self.health = 100   #health status to 100 (full)
+        self.weapon = Weapon()  #added (). Is it just () or do I also put in the name & attack power params? 
     
     def attack(self, dinosaur):
-        pass
+        self.attack = input('Enter 0 to select laser canon or enter 1 to select android crush: ')
+        if self.attack == 'laser canon':
+            self.attack_power = -5
+        elif self.attack == 'android crush':
+            self.attack_power == -10
+       # self.attack = Weapon().attack_power
+

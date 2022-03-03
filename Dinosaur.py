@@ -16,10 +16,14 @@
 class Dinosaur:
     def __init__(self, name, attack_power):
         self.name = name
-        self.attack_power = attack_power
-        self.health = int
+        self.attack_power = 0
+        self.health = 100
 
     def attack(self, robot):
-        pass
+        self.attack = input("Enter 0 to select tail slash or enter 1 to select stomp: ")
+        if self.attack == 'tail slash':
+            self.attack_power = -5
+        elif self.attack == 'stomp':
+            self.attack_power = -10
+        
 
-    
