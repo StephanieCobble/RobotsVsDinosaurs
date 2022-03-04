@@ -2,11 +2,11 @@
 
 from Robot import Robot
 
-
 class Fleet:
     def __init__(self):
         self.robots = []
         self.health = 100
+        
 
     def create_fleet(self):
         robot1 = Robot('Bender')
@@ -16,3 +16,4 @@ class Fleet:
         robot3 = Robot('Data')
         self.robots.append(robot3)
         self.health = (robot1 and robot2 and robot3)
+        

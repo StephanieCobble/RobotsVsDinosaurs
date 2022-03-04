@@ -15,3 +15,4 @@ class Herd:
         dino3 = Dinosaur('Yoshi', 5)
         self.dinosaurs.append(dino3)
         self.health = (dino1 and dino2 and dino3)
+

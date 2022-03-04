@@ -15,28 +15,29 @@
 
 
 from Weapon import Weapon
+import random       #added randomization
 
+laser_canon = Weapon('Laser Canon', 20)
+android_crush = Weapon('Android Crush', 10)
+bend = Weapon('Bend', 5)
+
+weapons_list = ['Laser Canon', 'Android Crush', 'Bend']
+rando_weapon = random.choice(weapons_list)
 
 class Robot:
     def __init__(self, name):
         self.name = name
         self.health = 100   #health status to 100 (full)
-        self.weapon = Weapon('protomolecule', 40)  #added (). Is it just () or do I also put in the name & attack power params? 
+        self.weapon = rando_weapon
     
-    def attack(self, dinosaur):
-        self.attack = dinosaur
-        while self.health > 0:              #added while loop
-            self.attack = int(input('Enter 0 to select laser canon or enter 1 to select android crush: '))
-            if self.attack == 0:
-                self.attack_power = 5
-                print(f'{self.name} has attacked for {self.weapon.attack_power} damage!')
-            elif self.attack == 1:
-                self.attack_power == 10
-                print(f'{self.name} has attacked for {self.weapon.attack_power} damage!')
-            else:
-                pass
+    def attack(self, dinosaur):             #rewrote to better streamline attacks. Changes include specifying weapons & listing them
+        if dinosaur.health > 0:
+            dinosaur.health = dinosaur.health - (self.weapon.attack_power)
+            print(f'{self.name} used {self.weapon.name} on {dinosaur.name} for {self.weapon.attack_power} damage!')
+        else:
+            pass
+  
+        
 
-        # Dinosaur.health -= self.weapon.attack_power
-        # print(f"{Dinosaur.name}'s health is now {Dinosaur.health}")
-       # self.attack = Weapon().attack_power
+   
 

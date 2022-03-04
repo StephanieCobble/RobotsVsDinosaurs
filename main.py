@@ -23,6 +23,7 @@
 # (/2 points): As a developer, I want a Robot to have a power level and a Dinosaur to have an energy, which 
 #              will decrease by 10 every time they attack.
 
+
 from Battlefield import Battlefield
 battlefield = Battlefield()
 battlefield.run_game()
