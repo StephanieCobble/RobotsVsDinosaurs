@@ -6,6 +6,7 @@ class Fleet:
     def __init__(self):
         self.robots = []
         self.health = 100
+        self.create_fleet()
         
 
     def create_fleet(self):

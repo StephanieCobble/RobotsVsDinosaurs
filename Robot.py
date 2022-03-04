@@ -21,7 +21,7 @@ laser_canon = Weapon('Laser Canon', 20)
 android_crush = Weapon('Android Crush', 10)
 bend = Weapon('Bend', 5)
 
-weapons_list = ['Laser Canon', 'Android Crush', 'Bend']
+weapons_list = [laser_canon, android_crush, bend]
 rando_weapon = random.choice(weapons_list)
 
 class Robot:
