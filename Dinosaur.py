@@ -20,11 +20,13 @@ class Dinosaur:
         self.name = name
         self.attack_power = attack_power
         self.health = 100
+        self.energy = 100
 
     def attack(self, robot):
         attack_moves = ['tail slah', 'stomp', 'bite']
         if robot.health > 0:
             robot.health = robot.health - self.attack_power
+            self.energy = self.energy - 10
             print(f'{self.name} has used {random.choice(attack_moves)} on {robot.name}, inflicting {self.attack_power} damage!')
         else:
             pass

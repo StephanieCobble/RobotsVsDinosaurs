@@ -28,14 +28,17 @@ class Robot:
     def __init__(self, name):
         self.name = name
         self.health = 100   #health status to 100 (full)
+        self.power = 100
         self.weapon = rando_weapon
     
     def attack(self, dinosaur):             #rewrote to better streamline attacks. Changes include specifying weapons & listing them
         if dinosaur.health > 0:
             dinosaur.health = dinosaur.health - (self.weapon.attack_power)
+            self.power = self.power - 10
             print(f'{self.name} used {self.weapon.name} on {dinosaur.name} for {self.weapon.attack_power} damage!')
         else:
             pass
+
   
         
 

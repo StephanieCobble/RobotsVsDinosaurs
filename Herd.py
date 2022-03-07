@@ -6,6 +6,7 @@ class Herd:
     def __init__(self):
         self.dinosaurs = []
         self.health = 100
+        self.energy = 100
         self.create_herd()
     
     def create_herd(self):
